@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SolAIre</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script src="Game.js"></script>
+        <script src="ConsoleLogger.js"></script>
+        <script src="BaseGameEntity.js"></script>
+        <script src="Dwarf.js"></script>
+        <script src="World.js"></script>
+        <script src="State.js"></script>
+        <script src="StateMachine.js"></script>
+        <script src="WeightedRandomSelector .js"></script>
+        <script src="EnterMineAndDigForNugget.js"></script>
+        <script src="GoHomeAndSleepUntilRested.js"></script>
+        <script src="VisitBankAndDepositGold.js"></script>
+        <script src="GoTradeOresForGold.js"></script>
+        <script src="GetDrinkAtSaloon.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const game = new Game();
+                game.Start();
+            });
+        </script>
+
+        <div class="container">
+
+            <table id="DwarfPropertyTable">
+                <tr>
+                    <th></th>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>⚡</td>
+                    <td>Energy</td>
+                    <td id="EnergyDisplay"></td>
+                </tr>
+                <tr>
+                    <td>🟡</td>
+                    <td>Gold Carried</td>
+                    <td id="GoldCarried"></td>
+                </tr>
+                <tr>
+                    <td>💰</td>
+                    <td>Bank Savings</td>
+                    <td id="MoneyInBank"></td>
+                </tr>
+                <tr>
+                    <td>🍖</td>
+                    <td>Hunger</td>
+                    <td id="HungerDisplay"></td>
+                </tr>
+                <tr>
+                    <td>🥛</td>
+                    <td>Thirst</td>
+                    <td id="ThirstDisplay"></td>
+                </tr>
+                <tr>
+                    <td>🎒</td>
+                    <td>Pocket Size</td>
+                    <td id="PocketLimit"></td>
+                </tr>
+            </table>
+
+
+            <table id="BackpackPropertyTable">
+                <tr>
+                    <th></th>
+                    <th>Item</th>
+                    <th>Count</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td id="CountDisplay">0</td>
+                </tr>
+                <tr>
+                    <td>📀</td>
+                    <td>Gold Ore</td>
+                    <td id="Gold Ore">0</td>
+                </tr>
+                <tr>
+                    <td>🧱</td>
+                    <td>PlainStone Ore</td>
+                    <td id="PlainStone Ore">0</td>
+                </tr>
+                <tr>
+                    <td>💿</td>
+                    <td>FlintIron Ore</td>
+                    <td id="FlintIron Ore">0</td>
+                </tr>
+                <tr>
+                    <td>🧊</td>
+                    <td>Quartzite Ore</td>
+                    <td id="Quartzite Ore">0</td>
+                </tr>
+                <tr>
+                    <td>🐚</td>
+                    <td>EchoPearl Ore</td>
+                    <td id="EchoPearl Ore">0</td>
+                </tr>
+                <tr>
+                    <td>🤍</td>
+                    <td>WyrmHeart Ore</td>
+                    <td id="WyrmHeart Ore">0</td>
+                </tr>
+                <tr>
+                    <td>⚙️</td>
+                    <td>StarSteel Ore</td>
+                    <td id="StarSteel Ore">0</td>
+                </tr>
+                <tr>
+                    <td>💎</td>
+                    <td>NovaCrystal Ore</td>
+                    <td id="NovaCrystal Ore">0</td>
+                </tr>
+            </table>
+
+            <dl class="WorldPropertyTable" id="WorldPropertyTable">
+                <div class="WorldProperties">
+                    <dt><b>Current Time:</b></dt>
+                    <dd id="CurrentTime">0</dd>
+
+                    <dt><b>Current Day:</b></dt>
+                    <dd id="DayCount">0</dd>
+
+                    <dt><b>Time of Day:</b></dt>
+                    <dd id="TimeOfDay">Night</dd>
+                </div>
+                <div class="WeatherIcon" id="WeatherIcon"></div>
+            </dl>
+
+        </div>
+
+        <div class="console">
+            <!-- Log messages will be displayed here -->
+        </div>
+
+
+    </body>
+
+</html>

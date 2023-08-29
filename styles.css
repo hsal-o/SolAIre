@@ -1,0 +1,129 @@
+
+.container {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#DwarfPropertyTable, #BackpackPropertyTable, #WorldPropertyTable {
+    float: left;
+    margin-right: 10px;
+}
+
+#WorldPropertyTable {
+    height: fit-content;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #2C3E50;
+    transition: background-color 2s;
+    position: relative;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    display: flex;
+}
+
+.WorldProperties{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    padding: 1em;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.WeatherIcon {
+    position: relative;
+    font-size: 48px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white;
+}
+
+
+#DwarfPropertyTable {
+    font-family: "Arial", sans-serif; 
+    border-collapse: collapse;
+    border: none;
+    background-color: #EBF5FB;
+    height: fit-content;
+}
+#DwarfPropertyTable th {
+    background-color: #3498DB;
+    color: white;
+    padding: 5px;
+}
+
+#DwarfPropertyTable td {
+    height: 25px;
+}
+
+#DwarfPropertyTable tr {
+    border-bottom: 1px solid #D5D8DC;
+}
+#DwarfPropertyTable tr:last-child {
+    border-bottom: none;
+}
+#DwarfPropertyTable td:nth-child(2) {
+    font-weight: bold;
+}
+#DwarfPropertyTable td:first-child,
+#DwarfPropertyTable td:last-child {
+    text-align: center;
+}
+
+/*   */
+#BackpackPropertyTable {
+    height: fit-content;
+    font-family: "Arial", sans-serif;
+    border-collapse: collapse;
+    border: none;
+    background-color: #E9F7EF;
+}
+
+    #BackpackPropertyTable th {
+        background-color: #27AE60;
+        color: white;
+        padding: 5px;
+    }
+
+#BackpackPropertyTable td {
+    height: 25px;
+}
+
+#BackpackPropertyTable tr {
+    border-bottom: 1px solid #D5D8DC;
+}
+
+    #BackpackPropertyTable tr:last-child {
+        border-bottom: none;
+    }
+
+#BackpackPropertyTable td:nth-child(2) {
+    font-weight: bold;
+}
+
+#BackpackPropertyTable td:first-child,
+#BackpackPropertyTable td:last-child {
+    text-align: center;
+}
+/*   */
+
+
+/* CONSOLE */
+.console {
+    width: 100%;
+    height: 300px; /* Adjust the desired height */
+    overflow: auto;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    padding: 10px;
+    box-sizing: border-box;
+}
