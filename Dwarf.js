@@ -108,7 +108,7 @@ class Dwarf extends BaseGameEntity{
     constructor(id){
         super(id);
 
-        this.Name = "Dwarf Thorin";
+        this.Name = "Dwarf Bilbo";
         this.GoldCarried = 0;
         this.PocketLimit = 10;
         this.MoneyInBank = 0;
